@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.openai import OpenAIEmbeddings
-from langchain_community.embeddings import HuggingFaceEmbeddings
+#from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import OpenAI
 from langchain_community.llms import GPT4All
@@ -18,8 +19,8 @@ from langchain.schema import Document
 ##########################################################################
 ## DEFINE VARIABLES
 # Change these to match your specific directory and file extension
-SUB_EXT = 'SUB_PDF'
-SUB_EMB = 'SUB_EMB'
+SUB_EXT = 'f_pdf'
+SUB_EMB = 'f_emb'
 EXT = '.pdf'
 EMB_EXT = '.pkl'
 FILE_LIST = 'file_name_list.txt'
@@ -29,7 +30,7 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if openai_api_key:
     local_path = (
-        "./models/orca-mini-3b-gguf2-q4_0.gguf"  # replace with your desired local file path
+        "./models/mpt-7b-chat-newbpe-q4_0.gguf"  # replace with your desired local file path
     )
     #llm = OpenAI(openai_api_key=openai_api_key)
     llm = GPT4All(model=local_path, verbose=True)

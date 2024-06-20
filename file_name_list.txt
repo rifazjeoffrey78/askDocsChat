@@ -1,2 +1,4 @@
 Module 14 - Nonlinear Models for Regression and Classification - Classification and Regression Trees - Quick Reference Guide.pdf
 _Rifaz_Jeoffrey_resume.pdf
+Module 9 - Formulating a Management Problem as a Linear Optimization Model.pdf
+Rifaz_Jeoffrey_resume.pdf
