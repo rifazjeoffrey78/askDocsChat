@@ -104,7 +104,7 @@ def get_conversational_rag_chain(retriever_chain):
     #llm = VertexAI(model_name="gemini-pro")
     #llm.init(project="224908056258")
 
-    llm = ChatTogether(model="meta-llama/Llama-3-70b-chat-hf") 
+    llm = ChatTogether(model="meta-llama/Llama-3-70b-chat-hf")
 
     #llm = ChatCohere(model="command", max_tokens=256, temperature=0.75, prompt_truncation='AUTO')
 
